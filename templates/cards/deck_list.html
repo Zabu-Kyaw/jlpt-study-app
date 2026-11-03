@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>デッキ一覧</h1>
+<ul>
+  {% for deck in decks %}
+    <li><a href="{% url 'quiz_question' deck.pk %}">{{ deck.name }}</a>（{{ deck.card_count }}枚）</li>
+  {% empty %}
+    <li>デッキがありません。</li>
+  {% endfor %}
+</ul>
+{% endblock %}

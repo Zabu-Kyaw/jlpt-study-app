@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+{% if is_correct %}
+  <h1 class="correct">正解！</h1>
+{% else %}
+  <h1 class="wrong">不正解</h1>
+{% endif %}
+<p class="big">{{ card.front }}</p>
+{% if card.reading %}<p>{{ card.reading }}</p>{% endif %}
+<p>{{ card.meaning }}</p>
+{% if card.example %}<p>例：{{ card.example }}</p>{% endif %}
+{% if not is_correct and chosen %}<p>あなたの答え：{{ chosen.meaning }}</p>{% endif %}
+<p><a href="{% url 'quiz_question' deck.pk %}">次の問題 →</a></p>
+<p><a href="{% url 'deck_list' %}">← デッキ一覧</a></p>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ deck.name }}</h1>
+{% if card %}
+  <p class="big">{{ card.front }}</p>
+  <form method="post" action="{% url 'quiz_answer' deck.pk %}">
+    {% csrf_token %}
+    {% for c in choices %}
+      <label class="choice">
+        <input type="radio" name="choice" value="{{ c.pk }}" required> {{ c.meaning }}
+      </label>
+    {% endfor %}
+    <button>答える</button>
+  </form>
+{% else %}
+  <p>このデッキにはまだカードがありません。</p>
+{% endif %}
+<p><a href="{% url 'deck_list' %}">← デッキ一覧</a></p>
+{% endblock %}

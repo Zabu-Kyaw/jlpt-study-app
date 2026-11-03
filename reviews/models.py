@@ -18,3 +18,12 @@ class Review(models.Model):
         constraints = [
             models.UniqueConstraint(fields=["user", "card"], name="unique_user_card")
         ]
+
+class Answer(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    card = models.ForeignKey(Card, on_delete=models.CASCADE)
+    is_correct = models.BooleanField()
+    answered_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        indexes = [models.Index(fields=["user", "answered_at"])]
