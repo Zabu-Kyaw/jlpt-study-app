@@ -1,0 +1,13 @@
+level,kind,front,reading,meaning,example
+N5,vocab,猫,ねこ,cat,猫がいます。
+N5,vocab,犬,いぬ,dog,犬が好きです。
+N5,vocab,水,みず,water,水を飲みます。
+N5,vocab,本,ほん,book,本を読みます。
+N5,vocab,学校,がっこう,school,学校に行きます。
+N5,vocab,先生,せんせい,teacher,先生は優しいです。
+N5,vocab,友達,ともだち,friend,友達と遊びます。
+N5,vocab,食べる,たべる,to eat,ご飯を食べます。
+N5,vocab,見る,みる,to see/watch,テレビを見ます。
+N5,vocab,大きい,おおきい,big,大きい犬です。
+N5,grammar,〜たい,,want to (do),日本に行きたいです。
+N5,grammar,〜ています,,ongoing action,今、勉強しています。
