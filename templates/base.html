@@ -11,11 +11,19 @@
     .choice { display: block; margin: .5rem 0; padding: .75rem; border: 1px solid #ccc; border-radius: 8px; cursor: pointer; }
     .correct { color: #1a7f37; }
     .wrong { color: #cf222e; }
+    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0 2rem; }
+    .stat { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; text-align: center; }
+    .num { display: block; font-size: 2rem; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: .5rem; border-bottom: 1px solid #ddd; }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="{% url 'deck_list' %}">JLPT Study</a>
+    <nav>
+    <div>
+      <a href="{% url 'deck_list' %}">デッキ</a> ·
+      <a href="{% url 'dashboard' %}">ダッシュボード</a>
+    </div>
     {% if user.is_authenticated %}
     <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button>ログアウト</button></form>
     {% endif %}

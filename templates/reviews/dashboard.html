@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}ダッシュボード{% endblock %}
+{% block content %}
+<h1>ダッシュボード</h1>
+
+<div class="stats">
+  <div class="stat"><span class="num">{{ stats.due_now }}</span>今日の復習</div>
+  <div class="stat"><span class="num">{% if stats.accuracy is None %}–{% else %}{{ stats.accuracy }}%{% endif %}</span>正答率</div>
+  <div class="stat"><span class="num">{{ stats.streak }}</span>連続学習日数</div>
+  <div class="stat"><span class="num">{{ stats.cards_studied }}</span>学習したカード</div>
+</div>
+
+<h2>苦手なカード</h2>
+{% if stats.weak_cards %}
+  <table>
+    <tr><th>カード</th><th>意味</th><th>正答率</th></tr>
+    {% for c in stats.weak_cards %}
+      <tr>
+        <td>{{ c.front }}{% if c.reading %}（{{ c.reading }}）{% endif %}</td>
+        <td>{{ c.meaning }}</td>
+        <td>{{ c.accuracy }}%（{{ c.total }}回中）</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>まだ間違えたカードはありません。</p>
+{% endif %}
+{% endblock %}

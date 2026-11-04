@@ -6,9 +6,15 @@ from cards.models import Card, Deck
 from cards.quiz import build_choices
 
 from .services import pick_next_card, record_answer
+from .stats import get_dashboard_stats
 
 SESSION_KEY = "quiz_card_id"
 
+@login_required
+def dashboard(request):
+    return render(
+        request, "reviews/dashboard.html", {"stats": get_dashboard_stats(request.user)}
+    )
 
 @login_required
 def quiz_question(request, deck_id):

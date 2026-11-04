@@ -12,6 +12,7 @@ from django.utils import timezone
 
 from reviews.models import Review
 from reviews.services import pick_next_card, record_answer
+from reviews.stats import get_dashboard_stats
 
 @pytest.fixture
 def deck(db):
@@ -92,3 +93,36 @@ def test_pick_returns_none_when_everything_is_done(user, deck):
     for card in deck.cards.all():
         record_answer(user, card, True)
     assert pick_next_card(user, deck) is None
+
+def test_dashboard_stats_empty(user):
+    stats = get_dashboard_stats(user)
+    assert stats["total"] == 0
+    assert stats["accuracy"] is None
+    assert stats["streak"] == 0
+    assert stats["weak_cards"] == []
+
+
+def test_dashboard_stats_with_answers(user, deck):
+    cards = list(deck.cards.all())
+    record_answer(user, cards[0], True)
+    record_answer(user, cards[0], False)
+    record_answer(user, cards[1], True)
+    stats = get_dashboard_stats(user)
+    assert stats["total"] == 3
+    assert stats["correct"] == 2
+    assert stats["accuracy"] == 67
+    assert stats["streak"] == 1
+    assert [c["front"] for c in stats["weak_cards"]] == [cards[0].front]
+
+
+def test_dashboard_requires_login(client):
+    response = client.get(reverse("dashboard"))
+    assert response.status_code == 302
+
+
+def test_dashboard_renders(client, user, deck):
+    record_answer(user, deck.cards.first(), True)
+    client.force_login(user)
+    response = client.get(reverse("dashboard"))
+    assert response.status_code == 200
+    assert response.context["stats"]["total"] == 1
