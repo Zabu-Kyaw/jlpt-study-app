@@ -2,11 +2,6 @@ import random
 
 from .models import Card
 
-
-def pick_next_card(deck):
-    return Card.objects.filter(deck=deck).order_by("?").first()
-
-
 def build_choices(card, num_distractors=3):
     """Return the correct card plus wrong options, shuffled."""
     distractors = list(

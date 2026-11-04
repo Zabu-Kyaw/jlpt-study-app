@@ -13,7 +13,11 @@
     <button>答える</button>
   </form>
 {% else %}
-  <p>このデッキにはまだカードがありません。</p>
+  {% if deck.cards.exists %}
+    <p>今日の復習は完了です。また明日！</p>
+  {% else %}
+    <p>このデッキにはまだカードがありません。</p>
+  {% endif %}
 {% endif %}
 <p><a href="{% url 'deck_list' %}">← デッキ一覧</a></p>
 {% endblock %}

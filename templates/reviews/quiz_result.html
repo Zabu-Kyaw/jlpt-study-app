@@ -10,6 +10,7 @@
 <p>{{ card.meaning }}</p>
 {% if card.example %}<p>例：{{ card.example }}</p>{% endif %}
 {% if not is_correct and chosen %}<p>あなたの答え：{{ chosen.meaning }}</p>{% endif %}
+<p>次の復習：{{ interval_days }}日後</p>
 <p><a href="{% url 'quiz_question' deck.pk %}">次の問題 →</a></p>
 <p><a href="{% url 'deck_list' %}">← デッキ一覧</a></p>
 {% endblock %}
