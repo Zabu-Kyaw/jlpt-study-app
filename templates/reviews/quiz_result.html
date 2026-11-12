@@ -1,16 +1,22 @@
 {% extends "base.html" %}
+{% block title %}結果{% endblock %}
 {% block content %}
-{% if is_correct %}
-  <h1 class="correct">正解！</h1>
-{% else %}
-  <h1 class="wrong">不正解</h1>
-{% endif %}
-<p class="big">{{ card.front }}</p>
-{% if card.reading %}<p>{{ card.reading }}</p>{% endif %}
-<p>{{ card.meaning }}</p>
-{% if card.example %}<p>例：{{ card.example }}</p>{% endif %}
-{% if not is_correct and chosen %}<p>あなたの答え：{{ chosen.meaning }}</p>{% endif %}
-<p>次の復習：{{ interval_days }}日後</p>
-<p><a href="{% url 'quiz_question' deck.pk %}">次の問題 →</a></p>
-<p><a href="{% url 'deck_list' %}">← デッキ一覧</a></p>
+<div class="page-head">
+  <a href="{% url 'deck_list' %}">← デッキ</a>
+  <span class="badge">{{ deck.level }}</span>
+</div>
+
+<section class="card result {% if is_correct %}ok{% else %}ng{% endif %}" style="margin-top:1rem">
+  <p class="verdict">{% if is_correct %}正解！{% else %}不正解{% endif %}</p>
+  <p class="prompt">{{ card.front }}</p>
+  {% if card.reading %}<p class="reading">{{ card.reading }}</p>{% endif %}
+  <p class="meaning">{{ card.meaning }}</p>
+  {% if card.example %}<p class="example">例：{{ card.example }}</p>{% endif %}
+  {% if not is_correct and chosen %}
+    <p class="muted">あなたの答え：{{ chosen.meaning|truncatechars:60 }}</p>
+  {% endif %}
+  <p class="muted">次の復習：{{ interval_days }}日後</p>
+</section>
+
+<a class="btn btn-primary btn-block" href="{% url 'quiz_question' deck.pk %}" autofocus>次の問題 →</a>
 {% endblock %}

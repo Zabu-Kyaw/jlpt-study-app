@@ -1,23 +1,48 @@
 {% extends "base.html" %}
+{% block title %}{{ deck.name }}{% endblock %}
 {% block content %}
-<h1>{{ deck.name }}</h1>
+<div class="page-head">
+  <a href="{% url 'deck_list' %}">← デッキ</a>
+  <span class="badge">{{ deck.level }}</span>
+</div>
+
 {% if card %}
-  <p class="big">{{ card.front }}</p>
+  <section class="card question">
+    <p class="muted">{% if card.kind == 'vocab' %}語彙{% else %}文法{% endif %}</p>
+    <p class="prompt">{{ card.front }}</p>
+  </section>
+
   <form method="post" action="{% url 'quiz_answer' deck.pk %}">
     {% csrf_token %}
     {% for c in choices %}
       <label class="choice">
-        <input type="radio" name="choice" value="{{ c.pk }}" required> {{ c.meaning }}
+        <input type="radio" name="choice" value="{{ c.pk }}" required>
+        <span class="key">{{ forloop.counter }}</span>
+        <span>{{ c.meaning|truncatechars:60 }}</span>
       </label>
     {% endfor %}
-    <button>答える</button>
+    <button class="btn btn-primary btn-block">答える</button>
   </form>
+  <p class="muted" style="text-align:center">キーボード：1〜4で選択、Enterで回答</p>
+
+  <script>
+    document.addEventListener("keydown", (e) => {
+      const radios = document.querySelectorAll('input[name="choice"]');
+      const n = parseInt(e.key, 10);
+      if (n >= 1 && n <= radios.length) {
+        radios[n - 1].checked = true;
+        radios[n - 1].focus();
+      }
+    });
+  </script>
 {% else %}
-  {% if deck.cards.exists %}
-    <p>今日の復習は完了です。また明日！</p>
-  {% else %}
-    <p>このデッキにはまだカードがありません。</p>
-  {% endif %}
+  <section class="card question">
+    {% if deck.cards.exists %}
+      <p class="prompt">🎉</p>
+      <p>今日の復習は完了です。また明日！</p>
+    {% else %}
+      <p>このデッキにはまだカードがありません。</p>
+    {% endif %}
+  </section>
 {% endif %}
-<p><a href="{% url 'deck_list' %}">← デッキ一覧</a></p>
 {% endblock %}

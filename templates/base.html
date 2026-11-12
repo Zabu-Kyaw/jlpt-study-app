@@ -1,33 +1,65 @@
+{% load static %}
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}JLPT Study{% endblock %}</title>
-  <style>
-    body { font-family: system-ui, "Noto Sans JP", sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
-    nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
-    .big { font-size: 2rem; margin: 1rem 0; }
-    .choice { display: block; margin: .5rem 0; padding: .75rem; border: 1px solid #ccc; border-radius: 8px; cursor: pointer; }
-    .correct { color: #1a7f37; }
-    .wrong { color: #cf222e; }
-    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0 2rem; }
-    .stat { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; text-align: center; }
-    .num { display: block; font-size: 2rem; font-weight: bold; }
-    table { width: 100%; border-collapse: collapse; }
-    th, td { text-align: left; padding: .5rem; border-bottom: 1px solid #ddd; }
-  </style>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
 </head>
 <body>
-    <nav>
-    <div>
-      <a href="{% url 'deck_list' %}">デッキ</a> ·
-      <a href="{% url 'dashboard' %}">ダッシュボード</a>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="{% url 'deck_list' %}">📚 JLPT Study</a>
+      <nav class="nav-links">
+        {% if user.is_authenticated %}
+          <a href="{% url 'deck_list' %}" {% if request.resolver_match.url_name == 'deck_list' %}class="active"{% endif %}>デッキ</a>
+          <a href="{% url 'dashboard' %}" {% if request.resolver_match.url_name == 'dashboard' %}class="active"{% endif %}>ダッシュボード</a>
+          <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="linklike">ログアウト</button></form>
+        {% endif %}
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="テーマを切り替え" title="ライト / ダーク">🌙</button>
+      </nav>
     </div>
-    {% if user.is_authenticated %}
-    <form method="post" action="{% url 'logout' %}">{% csrf_token %}<button>ログアウト</button></form>
-    {% endif %}
-  </nav>
-  {% block content %}{% endblock %}
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="muted">
+    語彙データ：<a href="https://www.tanos.co.uk/jlpt/">Jonathan Waller (tanos.co.uk)</a>, CC BY ／
+    意味：<a href="https://www.edrdg.org/jmdict/j_jmdict.html">JMdict</a> © EDRDG, CC BY-SA 4.0
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById("theme-toggle");
+
+      function render() {
+        var dark = root.getAttribute("data-theme") === "dark";
+        btn.textContent = dark ? "☀️" : "🌙";
+        btn.setAttribute("aria-pressed", dark ? "true" : "false");
+      }
+
+      btn.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        render();
+      });
+
+      render();
+    })();
+  </script>
 </body>
 </html>

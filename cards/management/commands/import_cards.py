@@ -22,6 +22,8 @@ class Command(BaseCommand):
             raise CommandError(f"File not found: {path}")
 
         created = updated = 0
+        decks = {}
+
         with path.open(encoding="utf-8-sig", newline="") as f:
             reader = csv.DictReader(f)
             missing = REQUIRED_COLUMNS - set(reader.fieldnames or [])
@@ -30,23 +32,32 @@ class Command(BaseCommand):
 
             for line_no, row in enumerate(reader, start=2):
                 level, kind = row["level"].strip(), row["kind"].strip()
+                front, meaning = row["front"].strip(), row["meaning"].strip()
                 if level not in Deck.Level.values:
                     raise CommandError(f"Line {line_no}: invalid level '{level}'")
                 if kind not in Card.Kind.values:
                     raise CommandError(f"Line {line_no}: invalid kind '{kind}'")
+                if not front or not meaning:
+                    raise CommandError(f"Line {line_no}: front and meaning are required")
 
-                deck, _ = Deck.objects.get_or_create(
-                    name=f"JLPT {level} {kind.capitalize()}", level=level
-                )
+                deck = decks.get((level, kind))
+                if deck is None:
+                    deck, _ = Deck.objects.get_or_create(
+                        name=f"JLPT {level} {kind.capitalize()}", level=level
+                    )
+                    decks[(level, kind)] = deck
+
+                defaults = {"meaning": meaning}
+                example = row["example"].strip()
+                if example:  # never wipe an existing example with a blank
+                    defaults["example"] = example
+
                 _, was_created = Card.objects.update_or_create(
                     deck=deck,
                     kind=kind,
-                    front=row["front"].strip(),
-                    defaults={
-                        "reading": row["reading"].strip(),
-                        "meaning": row["meaning"].strip(),
-                        "example": row["example"].strip(),
-                    },
+                    front=front,
+                    reading=row["reading"].strip(),
+                    defaults=defaults,
                 )
                 created += was_created
                 updated += not was_created

@@ -1,0 +1,201 @@
+﻿level,kind,front,reading,meaning,example
+N5,grammar,〜ませんか,,won't you...? (polite invitation),一緒に映画を見ませんか。
+N5,grammar,〜ましょう,,let's... (suggestion),ここで少し休みましょう。
+N5,grammar,〜ましょうか,,shall I...? / shall we...? (offer),荷物を持ちましょうか。
+N5,grammar,〜たい,,want to do (verb stem + たい),日本に行きたいです。
+N5,grammar,〜がほしい,,want (a thing),新しいかばんがほしいです。
+N5,grammar,〜ています,,is doing (ongoing action); state resulting from an action,今、勉強しています。
+N5,grammar,〜てください,,please do (request),ここに名前を書いてください。
+N5,grammar,〜ないでください,,please don't do,ここで写真を撮らないでください。
+N5,grammar,〜てもいいです,,may do; it's okay to do (permission),ここに座ってもいいですか。
+N5,grammar,〜てはいけません,,must not do (prohibition),教室で食べてはいけません。
+N5,grammar,〜てから,,"after doing..., (and then)",ご飯を食べてから、宿題をします。
+N5,grammar,〜前に,,before doing / before (noun),寝る前に歯を磨きます。
+N5,grammar,〜たり〜たりする,,do things like ... and ... (example actions),休みの日は本を読んだり、映画を見たりします。
+N5,grammar,〜が,,"but, however (contrast)",この店は安いですが、あまりおいしくないです。
+N5,grammar,〜から,,because (reason + から),寒いですから、窓を閉めます。
+N5,grammar,〜と思います,,I think that...,明日は雨が降ると思います。
+N5,grammar,〜ことができる,,"can do, be able to do",私は日本語を話すことができます。
+N5,grammar,〜でしょう,,probably...; right? (seeking agreement),明日は雨でしょう。
+N5,grammar,〜より,,than (comparison),電車はバスより速いです。
+N5,grammar,〜のほうが,,... is more (than ...) (comparison),犬より猫のほうが好きです。
+N5,grammar,〜が一番,,the most... (superlative),果物の中でりんごが一番好きです。
+N5,grammar,〜があります,,"there is, I have (inanimate things)",机の上に本があります。
+N5,grammar,〜がいます,,"there is, I have (people, animals)",公園に犬がいます。
+N5,grammar,〜で (場所),,"at, in (place of an action)",図書館で本を読みます。
+N5,grammar,〜で (手段),,"by, with (means or tool)",バスで学校に行きます。
+N5,grammar,〜に (時間),,at (a specific time),毎朝七時に起きます。
+N5,grammar,〜に (場所),,"to, at (destination, place of existence)",友達の家に行きます。
+N5,grammar,〜と (一緒に),,with (a companion),友達と映画を見ます。
+N5,grammar,〜から〜まで,,from ... to ...,九時から五時まで働きます。
+N5,grammar,〜や,,and (non-exhaustive list),机の上に本やノートがあります。
+N5,grammar,もう〜ました,,already did,もう宿題をしました。
+N5,grammar,まだ〜ていません,,have not done yet,まだ昼ご飯を食べていません。
+N5,grammar,〜になる,,become (noun/na-adjective + になる),来月、二十歳になります。
+N5,grammar,〜くなる,,become (i-adjective + くなる),だんだん寒くなります。
+N5,grammar,〜にする,,"decide on, choose (I'll have...)",私はコーヒーにします。
+N5,grammar,〜だけ,,"only, just",水だけ飲みます。
+N5,grammar,〜ごろ,,around (a time),六時ごろ帰ります。
+N5,grammar,〜ぐらい,,"about, approximately (amount)",駅まで十分ぐらいかかります。
+N5,grammar,〜ではありません,,"is not (noun, polite)",私は先生ではありません。
+N5,grammar,〜でした,,"was (noun, polite past)",昨日は雨でした。
+N5,grammar,〜くないです,,"is not (i-adjective, polite)",この本は高くないです。
+N5,grammar,〜て (つなぎ),,and (connecting actions or adjectives),朝起きて、顔を洗います。
+N5,grammar,〜よ,,"I'm telling you (emphasis, new information)",この店、おいしいですよ。
+N5,grammar,〜ね,,"..., right? isn't it? (seeking agreement)",今日は暑いですね。
+N4,grammar,〜たことがある,,have done (past experience),富士山に登ったことがあります。
+N4,grammar,〜たほうがいい,,"had better do, it's better to do",早く寝たほうがいいですよ。
+N4,grammar,〜ないほうがいい,,had better not do,夜遅くコーヒーを飲まないほうがいいです。
+N4,grammar,〜なければならない,,"must do, have to do",明日までにレポートを出さなければなりません。
+N4,grammar,〜なくてもいい,,don't have to do,今日は来なくてもいいです。
+N4,grammar,〜てみる,,"try doing, do and see",この服を着てみてもいいですか。
+N4,grammar,〜ておく,,"do in advance, do and leave as is",旅行の前にホテルを予約しておきます。
+N4,grammar,〜てしまう,,end up doing; finish doing (often with regret),電車に傘を忘れてしまいました。
+N4,grammar,〜てあげる,,do (something) for someone,友達に地図を書いてあげました。
+N4,grammar,〜てもらう,,get someone to do (receive a favor),先生に作文を直してもらいました。
+N4,grammar,〜てくれる,,someone does (something) for me,友達が空港まで迎えに来てくれました。
+N4,grammar,〜ていただけませんか,,could you please do (polite request),もう一度説明していただけませんか。
+N4,grammar,〜させてください,,please let me do,私にも手伝わせてください。
+N4,grammar,〜すぎる,,"too much, excessively",昨日は食べすぎました。
+N4,grammar,〜ながら,,while doing (two simultaneous actions),音楽を聞きながら勉強します。
+N4,grammar,〜やすい,,easy to do,このペンは書きやすいです。
+N4,grammar,〜にくい,,hard to do,この靴は歩きにくいです。
+N4,grammar,〜はじめる,,start to do,雨が降り始めました。
+N4,grammar,〜つづける,,continue doing,彼は三時間も話し続けました。
+N4,grammar,〜つもりだ,,"intend to do, plan to",来年、日本で働くつもりです。
+N4,grammar,〜ようと思う,,I'm thinking of doing (volitional),夏休みに旅行しようと思っています。
+N4,grammar,〜予定だ,,"plan to, scheduled to",来週、出張する予定です。
+N4,grammar,〜たら,,"if, when (conditional)",雨が降ったら、行きません。
+N4,grammar,〜と (条件),,if/whenever ... (natural result),春になると、桜が咲きます。
+N4,grammar,〜ば,,"if (conditional, ba-form)",安ければ、買います。
+N4,grammar,〜なら,,if it's the case that...; as for... (topic-based),京都に行くなら、秋がいいですよ。
+N4,grammar,〜ので,,"because (objective, softer reason)",雨が降っているので、家にいます。
+N4,grammar,〜のに,,"even though, despite (unexpected result)",勉強したのに、テストの点が悪かったです。
+N4,grammar,〜ために,,in order to (purpose),日本語を勉強するために、日本に来ました。
+N4,grammar,〜ように,,so that (desired outcome),忘れないように、メモします。
+N4,grammar,〜ようにする,,"make an effort to, try to (habit)",毎日、野菜を食べるようにしています。
+N4,grammar,〜ようになる,,"come to be able to, come to do",日本語が話せるようになりました。
+N4,grammar,〜ことにする,,decide to do,来月から運動することにしました。
+N4,grammar,〜ことになる,,"it is decided that, it turns out that",来月から大阪で働くことになりました。
+N4,grammar,〜ことがある,,"sometimes do, there are times when",朝ごはんを食べないことがあります。
+N4,grammar,〜かもしれない,,"might, may, perhaps",明日は雪が降るかもしれません。
+N4,grammar,〜かどうか,,whether or not,彼が来るかどうか、わかりません。
+N4,grammar,〜そうだ (様態),,"looks like, seems about to (appearance)",このケーキはおいしそうです。
+N4,grammar,〜そうだ (伝聞),,"I hear that, they say (hearsay)",天気予報によると、明日は雨だそうです。
+N4,grammar,〜しか〜ない,,"only, nothing but (with negative)",財布に百円しかありません。
+N4,grammar,〜でも,,even; ... or something (suggestion),お茶でも飲みませんか。
+N4,grammar,〜という,,"called, named (X という Y)",「さくら」という店に行きました。
+N4,grammar,〜させる,,make/let someone do (causative),先生は学生に本を読ませました。
+N4,grammar,〜られる (受身),,be done to (passive),私は先生にほめられました。
+N4,grammar,〜られる (可能),,can do (potential form),私は納豆が食べられません。
+N4,grammar,〜なさい,,do (gentle command),早く寝なさい。
+N4,grammar,〜たがる,,wants to (third person),弟は新しいゲームを買いたがっています。
+N4,grammar,〜はずだ,,"should be, expected to be",彼は今日、来るはずです。
+N3,grammar,〜ようだ,,"seems like, looks as if (judgment from evidence)",誰もいないようです。
+N3,grammar,〜みたいだ,,"seems like; like, similar to (casual)",あの人は外国人みたいだね。
+N3,grammar,〜らしい (推量),,"apparently, I hear (based on information)",彼は来月結婚するらしいです。
+N3,grammar,〜らしい (らしさ),,"typical of, -like (befitting)",今日は春らしい天気ですね。
+N3,grammar,〜っぽい,,-ish; tends to be (often negative),最近、忘れっぽくて困っています。
+N3,grammar,〜がち,,"tend to, apt to (undesirable)",冬は風邪をひきがちです。
+N3,grammar,〜たところだ,,has just done,今、家に着いたところです。
+N3,grammar,〜ているところだ,,is in the middle of doing,今、晩ご飯を作っているところです。
+N3,grammar,〜るところだ,,is about to do,今、出かけるところです。
+N3,grammar,〜ばかり,,"only, nothing but",弟はゲームばかりしています。
+N3,grammar,〜たばかり,,just did (recent past),昨日日本に来たばかりです。
+N3,grammar,〜はずがない,,there's no way that (based on reasoning),彼がそんなことをするはずがありません。
+N3,grammar,〜に違いない,,"must be, no doubt",電気がついているから、彼は家にいるに違いない。
+N3,grammar,〜ことはない,,"no need to, there is no reason to",心配することはありません。
+N3,grammar,〜わけだ,,"that's why, no wonder; it means that",彼は日本に十年住んでいたのか。日本語が上手なわけだ。
+N3,grammar,〜わけではない,,"it doesn't mean that, not necessarily",日本料理が嫌いなわけではありません。
+N3,grammar,〜わけにはいかない,,cannot do (for social or moral reasons),明日は試験だから、遊びに行くわけにはいかない。
+N3,grammar,〜ないわけにはいかない,,"have to do, can't avoid doing",約束したから、行かないわけにはいかない。
+N3,grammar,〜によって,,depending on; by (agent or means),人によって、考え方は違います。
+N3,grammar,〜によると,,according to (source of information),新聞によると、新しい駅ができるそうです。
+N3,grammar,〜について,,"about, concerning",日本の文化について調べています。
+N3,grammar,〜に対して,,"toward, against; in contrast to",お客様に対して失礼なことを言ってはいけません。
+N3,grammar,〜として,,as (a role or capacity),留学生として日本に来ました。
+N3,grammar,〜にとって,,"for, from the standpoint of",私にとって家族は一番大切です。
+N3,grammar,〜ことになっている,,"is the rule/custom that, is supposed to",ここでは靴を脱ぐことになっています。
+N3,grammar,〜ことにしている,,"make it a rule to, make a habit of",毎晩、日記を書くことにしています。
+N3,grammar,〜うちに,,while (before the situation changes),若いうちに、いろいろな経験をしたほうがいいです。
+N3,grammar,〜間に,,"while, during (something happens within a period)",寝ている間に、地震がありました。
+N3,grammar,〜間,,"during, throughout (continuous state)",夏休みの間、ずっとアルバイトをしました。
+N3,grammar,〜たびに,,"every time, whenever",この歌を聞くたびに、故郷を思い出します。
+N3,grammar,〜ついでに,,"while at it, taking the opportunity",買い物のついでに、郵便局に寄りました。
+N3,grammar,〜ことだ,,you should (advice),上手になりたければ、毎日練習することだ。
+N3,grammar,〜べきだ,,"should, ought to",約束は守るべきです。
+N3,grammar,〜ずに,,without doing (written style),朝ご飯を食べずに、学校へ行きました。
+N3,grammar,〜ないで,,without doing (spoken style),傘を持たないで出かけてしまいました。
+N3,grammar,〜ように言う,,tell someone to do,先生は私に、もっとゆっくり話すように言いました。
+N3,grammar,〜てほしい,,want someone to do,あなたに手伝ってほしいです。
+N3,grammar,〜ば〜ほど,,the more ... the more ...,日本語は勉強すればするほど面白くなります。
+N3,grammar,〜くらい,,"to the extent of, as much as",歩けないくらい疲れました。
+N3,grammar,〜ほど〜ない,,not as ... as,今年の夏は去年ほど暑くないです。
+N3,grammar,〜といえば,,speaking of ...,日本料理といえば、やっぱり寿司ですね。
+N3,grammar,〜さえ,,even (emphasizing an extreme example),忙しくて、食事をする時間さえありません。
+N3,grammar,〜ために (原因),,"because of, due to (reason)",事故のために、電車が遅れました。
+N3,grammar,〜せいで,,because of (negative cause),寝坊したせいで、遅刻しました。
+N3,grammar,〜おかげで,,thanks to (positive cause),先生のおかげで、合格できました。
+N3,grammar,〜だけでなく,,not only ... but also,彼女は英語だけでなく、中国語も話せる。
+N3,grammar,〜ものだ,,used to (nostalgic recollection); one should (general truth),子どもの頃はよく川で遊んだものだ。
+N2,grammar,〜わけがない,,"there's no reason that, impossible (emphatic)",あんなに練習していない彼が優勝するわけがない。
+N2,grammar,〜ざるを得ない,,have no choice but to,病気なので、会議を欠席せざるを得ません。
+N2,grammar,〜ないではいられない,,can't help but do,その映画を見て、泣かないではいられませんでした。
+N2,grammar,〜ものか,,"no way I would, as if! (emphatic denial)",あんな人に頼むものか。
+N2,grammar,〜に決まっている,,"surely, of course it is",あんなに練習したのだから、勝つに決まっている。
+N2,grammar,〜というより,,rather than ... (more like),彼は優しいというより、気が弱いんです。
+N2,grammar,〜に限る,,"nothing beats, the best is",暑い日はビールに限る。
+N2,grammar,〜に限って,,of all times/people (unexpectedly),急いでいる日に限って、電車が遅れる。
+N2,grammar,〜に比べて,,compared to,去年に比べて、今年は雨が多いです。
+N2,grammar,〜に関して,,"regarding, concerning (formal)",この問題に関して、ご意見をお聞かせください。
+N2,grammar,〜に応じて,,"in accordance with, depending on",収入に応じて、税金が決まります。
+N2,grammar,〜に基づいて,,based on (a principle or standard),調査の結果に基づいて、計画を立てました。
+N2,grammar,〜をはじめ,,"starting with, such as ... and others",東京をはじめ、日本の大都市では人口が増えています。
+N2,grammar,〜を通じて,,through (a person or medium); throughout (a period),友人を通じて、彼女を知りました。
+N2,grammar,〜において,,"in, at (formal: place, time, field)",会議は大会議室において行われます。
+N2,grammar,〜にわたって,,"over, across (a range of time or space)",この地域では、三日間にわたって大雨が続きました。
+N2,grammar,〜かわりに,,instead of; in exchange for,今日は電車のかわりに、自転車で行きます。
+N2,grammar,〜一方で,,on the other hand; while also,彼は仕事が忙しい一方で、趣味も楽しんでいます。
+N2,grammar,〜反面,,but at the same time (the flip side),この仕事は給料がいい反面、残業が多いです。
+N2,grammar,〜くせに,,even though (with criticism),知らないくせに、えらそうに言うな。
+N2,grammar,〜にもかかわらず,,"in spite of, despite",雨にもかかわらず、大勢の人が集まりました。
+N2,grammar,〜ながらも,,"although, while still",狭いながらも、自分の家があるのは嬉しい。
+N2,grammar,〜つつある,,is in the process of (gradual change),世界の人口は増えつつあります。
+N2,grammar,〜ばかりか,,not only ... but even,彼は英語ばかりか、フランス語も話せる。
+N2,grammar,〜のみならず,,not only ... but also (formal),彼は国内のみならず、海外でも有名だ。
+N2,grammar,〜はもちろん,,"of course, not to mention",この店はランチはもちろん、夜も人気がある。
+N2,grammar,〜わりに,,"considering, for (contrary to expectation)",この店は安いわりに、味がいい。
+N2,grammar,〜といっても,,"although one says, even so",料理ができるといっても、簡単なものだけです。
+N2,grammar,〜からには,,"now that, since (obligation to follow through)",やると決めたからには、最後までがんばります。
+N2,grammar,〜上で,,after doing (and based on that),よく考えた上で、お返事します。
+N2,grammar,〜最中に,,"in the middle of, right when",会議の最中に、電話が鳴った。
+N2,grammar,〜とたん,,"the moment, just as",家を出たとたん、雨が降り出した。
+N2,grammar,〜か〜ないかのうちに,,"no sooner than, just as",ベルが鳴るか鳴らないかのうちに、学生たちは教室を出た。
+N2,grammar,〜次第,,as soon as (formal),結果がわかり次第、ご連絡します。
+N2,grammar,〜かと思うと,,"just when I thought ..., (sudden change)",泣いていたかと思うと、もう笑っている。
+N2,grammar,〜てたまらない,,"can't stand, unbearably",暑くてたまらない。
+N2,grammar,〜てならない,,can't help feeling (emotion),試験の結果が気になってならない。
+N2,grammar,〜ほかない,,have no other choice but to,道が通れないなら、遠回りするほかない。
+N2,grammar,〜かねる,,cannot (polite refusal),その件については、お答えしかねます。
+N2,grammar,〜かねない,,"might even, could possibly (bad outcome)",このままでは、大きな事故になりかねない。
+N2,grammar,〜がたい,,"hard to, difficult to (emotional or abstract)",あの事件は信じがたい。
+N2,grammar,〜得る,,"can, possible (得ない = impossible)",それは十分にあり得る話だ。
+N2,grammar,〜きる,,"do completely, to the end",マラソンを走りきった。
+N2,grammar,〜っぱなし,,"leave as is, keep (in a state)",電気をつけっぱなしで寝てしまった。
+N2,grammar,〜気味,,"slightly, a touch of (a bad state)",風邪気味なので、早く帰ります。
+N2,grammar,〜げ,,"looks, seems (feeling shown on the face)",彼女は寂しげな顔をしていた。
+N2,grammar,〜っこない,,"no way, definitely not",そんな難しい問題、解けっこないよ。
+N2,grammar,〜どころか,,"far from, let alone",彼は貯金どころか、借金だらけだ。
+N2,grammar,〜どころではない,,"not the time/state to, out of the question",忙しくて、旅行どころではない。
+N2,grammar,〜とは限らない,,not necessarily,高いからといって、いい物とは限らない。
+N2,grammar,〜ものの,,"although, but (yet)",買ったものの、一度も使っていない。
+N2,grammar,〜とはいえ,,although; that said,春とはいえ、まだ寒い日が続く。
+N2,grammar,〜ことなく,,without ever doing (formal),彼は休むことなく、働き続けた。
+N2,grammar,〜に先立って,,"prior to, in advance of",試合に先立って、開会式が行われた。
+N2,grammar,〜に伴って,,"along with, accompanying (changes)",経済の発展に伴って、人々の生活も変わった。
+N2,grammar,〜につれて,,"as ..., gradually (parallel change)",時間がたつにつれて、悲しみは薄れていった。
+N2,grammar,〜にしては,,"for, considering that (unexpectedly)",初めてにしては、上手に作れましたね。
+N2,grammar,〜さえ〜ば,,"if only, as long as",お金さえあれば、何でも買える。
+N2,grammar,〜に過ぎない,,"is nothing more than, merely",それは噂に過ぎない。
+N2,grammar,〜せいか,,maybe because of,疲れているせいか、頭が痛い。
+N2,grammar,〜とともに,,together with; as (change),年をとるとともに、体力が落ちてきた。

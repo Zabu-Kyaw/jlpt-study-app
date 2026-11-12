@@ -1,11 +1,22 @@
 {% extends "base.html" %}
+{% block title %}デッキ一覧{% endblock %}
 {% block content %}
 <h1>デッキ一覧</h1>
-<ul>
-  {% for deck in decks %}
-    <li><a href="{% url 'quiz_question' deck.pk %}">{{ deck.name }}</a>（{{ deck.card_count }}枚）</li>
-  {% empty %}
-    <li>デッキがありません。</li>
-  {% endfor %}
-</ul>
+{% regroup decks by level as level_groups %}
+{% for group in level_groups %}
+  <h2>{{ group.grouper }}</h2>
+  <div class="deck-grid">
+    {% for deck in group.list %}
+      <a class="card deck" href="{% url 'quiz_question' deck.pk %}" style="color: inherit; text-decoration: none;">
+        <h3>{{ deck.name }}</h3>
+        <div class="progress"><span style="width: {% widthratio deck.studied deck.card_count 100 %}%"></span></div>
+        <p class="muted">{{ deck.studied }} / {{ deck.card_count }}枚 学習済み
+          {% if deck.due %}<span class="badge due">復習 {{ deck.due }}</span>{% endif %}
+        </p>
+      </a>
+    {% endfor %}
+  </div>
+{% empty %}
+  <p>デッキがありません。</p>
+{% endfor %}
 {% endblock %}
