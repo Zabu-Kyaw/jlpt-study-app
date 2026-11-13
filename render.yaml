@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: jlpt-study-app
+    runtime: python
+    plan: free
+    region: singapore
+    buildCommand: >-
+      pip install -r requirements.txt
+      && python manage.py collectstatic --noinput
+      && python manage.py migrate --noinput
+      && python manage.py import_cards data/jlpt_n5_n2_vocab.csv
+      && python manage.py import_cards data/jlpt_n5_n2_grammar.csv
+    startCommand: gunicorn config.wsgi:application
+    healthCheckPath: /login/
+    envVars:
+      - key: PRODUCTION
+        value: "True"
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false

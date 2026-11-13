@@ -7,7 +7,7 @@ from django.db import transaction
 from cards.models import Card, Deck
 
 REQUIRED_COLUMNS = {"level", "kind", "front", "reading", "meaning", "example"}
-
+BATCH = 500
 
 class Command(BaseCommand):
     help = "Import cards from a CSV (columns: level, kind, front, reading, meaning, example)."

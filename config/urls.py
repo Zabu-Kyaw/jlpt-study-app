@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import include, path
 from reviews.views import dashboard
+from config.views import signup
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -11,4 +12,5 @@ urlpatterns = [
     path("api/", include("api.urls")),
     path("quiz/", include("reviews.urls")),
     path("", include("cards.urls")),
+    path("signup/", signup, name="signup"),
 ]
