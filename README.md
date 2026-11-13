@@ -164,7 +164,7 @@ The JLPT does not publish official vocabulary or grammar lists, so the levels he
 
 ### Author
 
-**Za Bu Kyaw (Steven)** · [GitHub](https://github.com/Zabu-Kyaw) · [LinkedIn](https://www.linkedin.com/in/zabukyaw)
+**Zabu Kyaw** · [GitHub](https://github.com/Zabu-Kyaw) · [LinkedIn](https://www.linkedin.com/in/zabukyaw) · [Portfolio](https://zabukyaw.dev/)
 
 ---
 
@@ -288,4 +288,4 @@ JLPTは公式の語彙・文法リストを公開していないため、ここ�
 
 ### 作者
 
-**Za Bu Kyaw (Steven)** · [GitHub](https://github.com/Zabu-Kyaw) · [LinkedIn](https://www.linkedin.com/in/zabukyaw)
+**Zabu Kyaw** · [GitHub](https://github.com/Zabu-Kyaw) · [LinkedIn](https://www.linkedin.com/in/zabukyaw) · [Portfolio](https://zabukyaw.dev/)
